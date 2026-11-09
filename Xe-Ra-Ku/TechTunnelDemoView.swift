@@ -163,11 +163,8 @@ struct TechTunnelDemoView: View {
         Button {
             // TODO: Online-Duell oder Lobby öffnen
         } label: {
-            HStack(spacing: 14) {
-                Image(systemName: "network")
-                    .font(.title2)
-
-                Text("SYSTEM ONLINE")
+            HStack(spacing: 0) {
+                Text("SYSTEM HOCHFAHREN")
                     .font(
                         .system(
                             size: 20,
@@ -175,10 +172,7 @@ struct TechTunnelDemoView: View {
                             design: .monospaced
                         )
                     )
-                    .tracking(2)
-
-                Image(systemName: "chevron.right")
-                    .font(.headline)
+                    .tracking(3)
             }
             .foregroundStyle(.white)
             .padding(.horizontal, 28)
