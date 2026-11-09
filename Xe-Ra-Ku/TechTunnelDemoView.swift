@@ -24,6 +24,7 @@ struct TechTunnelDemoView: View {
 
     @State private var isAnimated = true
     @State private var showsControls = false
+    @State private var showMenu = false
 
     @Environment(\.accessibilityReduceMotion)
     private var reduceMotion
@@ -57,52 +58,59 @@ struct TechTunnelDemoView: View {
     // MARK: - Body
 
     var body: some View {
-        ZStack {
-            TechTunnelView(
-                speed: speed,
-                intensity: intensity,
-                isAnimated: effectiveAnimation,
-                quality: selectedQuality
-            )
-            .ignoresSafeArea()
-            .accessibilityHidden(true)
-
-            // Centered game logo
-            VStack(spacing: 36) {
-                TechGameLogo(
-                    title: "XE-RA-KU",
+        NavigationStack {
+            ZStack {
+                TechTunnelView(
+                    speed: speed,
+                    intensity: intensity,
+                    isAnimated: effectiveAnimation,
+                    quality: selectedQuality
                 )
+                .ignoresSafeArea()
+                .accessibilityHidden(true)
 
-                onlineButton
-            }
-            .padding(.horizontal)
+                // Centered game logo
+                VStack(spacing: 36) {
+                    TechGameLogo(
+                        title: "XE-RA-KU",
+                    )
 
-            // Existing header and controls
-            VStack(spacing: 0) {
-                header
-
-                Spacer(minLength: 20)
-
-                if showsControls {
-                    controlsPanel
-                        .transition(
-                            .move(edge: .bottom)
-                                .combined(with: .opacity)
-                        )
+                    onlineButton
                 }
+                .padding(.horizontal)
 
-                footer
-                    .padding(.top, 16)
+                // Existing header and controls
+                VStack(spacing: 0) {
+                    header
+
+                    Spacer(minLength: 20)
+
+                    if showsControls {
+                        controlsPanel
+                            .transition(
+                                .move(edge: .bottom)
+                                    .combined(with: .opacity)
+                            )
+                    }
+
+                    footer
+                        .padding(.top, 16)
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 12)
+                .padding(.bottom, 16)
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 12)
-            .padding(.bottom, 16)
+            .preferredColorScheme(.dark)
+            .animation(
+                reduceMotion ? nil : .smooth(duration: 0.35),
+                value: showsControls
+            )
+            .navigationDestination(isPresented: $showMenu) {
+                MenuView()
+                    .navigationBarBackButtonHidden()
+            }
+            .toolbar(.hidden, for: .navigationBar)
         }
-        .preferredColorScheme(.dark)
-        .animation(
-            reduceMotion ? nil : .smooth(duration: 0.35),
-            value: showsControls
-        )
     }
 
     // MARK: - Footer
@@ -161,7 +169,9 @@ struct TechTunnelDemoView: View {
 
     private var onlineButton: some View {
         Button {
-            // TODO: Online-Duell oder Lobby öffnen
+            withAnimation(.easeInOut(duration: 0.5)) {
+                showMenu = true
+            }
         } label: {
             HStack(spacing: 0) {
                 Text("SYSTEM HOCHFAHREN")

@@ -45,6 +45,8 @@ private enum MenuPalette {
 // MARK: - Root
 
 struct MenuView: View {
+    @Environment(\.dismiss) private var dismiss
+
     @State private var selectedTab: MenuTab = .home
 
     var body: some View {
@@ -91,31 +93,70 @@ struct MenuView: View {
 
     // MARK: - Custom Header
 
+    // MARK: - Custom Header
+
     private var header: some View {
-        HStack(spacing: 0) {
-            VStack(alignment: .leading, spacing: 2) {
+        HStack(spacing: 14) {
+
+            Button {
+                dismiss()
+            } label: {
+                Image(systemName: "arrow.left")
+                    .font(.system(size: 17, weight: .bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 44, height: 44)
+                    .background {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(.blue.opacity(0.25))
+                    }
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .strokeBorder(.cyan.opacity(0.5), lineWidth: 1)
+                    }
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Zurück zum Startbildschirm")
+
+            VStack(alignment: .leading, spacing: 3) {
                 Text("XE-RA-KU")
                     .font(
-                        .system(size: 19, weight: .black, design: .monospaced)
+                        .system(
+                            size: 19,
+                            weight: .black,
+                            design: .monospaced
+                        )
                     )
                     .tracking(3)
                     .foregroundStyle(.white)
+
+                Text("SYSTEM ONLINE")
+                    .font(
+                        .system(
+                            size: 9,
+                            weight: .bold,
+                            design: .monospaced
+                        )
+                    )
+                    .tracking(2)
+                    .foregroundStyle(.cyan)
             }
 
             Spacer()
         }
-        .padding()
+        .padding(14)
         .background {
-            TechLogoFrame().fill(
-                LinearGradient(
-                    colors: [.black, .blue, .black],
-                    startPoint: .leading,
-                    endPoint: .trailing
+            TechLogoFrame()
+                .fill(
+                    LinearGradient(
+                        colors: [.black, .blue, .black],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
                 )
-            )
         }
         .overlay {
-            TechLogoFrame().stroke(.blue, lineWidth: 1.5)
+            TechLogoFrame()
+                .stroke(.blue, lineWidth: 1.5)
         }
     }
 
