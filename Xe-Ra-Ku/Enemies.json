@@ -1,0 +1,30 @@
+[
+    {
+        "id": "shadow_rival",
+        "name": "SCHATTEN-RIVALE",
+        "portraitAsset": "charakter_1",
+        "difficulty": 2,
+        "lifePoints": 5000,
+        "requiredAccountLevel": 1,
+        "deckCardIDs": [
+            "raiku",
+            "abyss",
+            "cyber",
+            "lumina"
+        ]
+    },
+    {
+        "id": "void_guardian",
+        "name": "VOID-WÄCHTER",
+        "portraitAsset": "charakter_2",
+        "difficulty": 3,
+        "lifePoints": 6500,
+        "requiredAccountLevel": 10,
+        "deckCardIDs": [
+            "abyss",
+            "golem",
+            "seraph",
+            "terra"
+        ]
+    }
+]

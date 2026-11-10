@@ -1,0 +1,16 @@
+[
+    {
+        "id": "nimbi",
+        "name": "Nimbi",
+        "portraitAsset": "charakter_1",
+        "requiredAccountLevel": 1,
+        "description": "Freischaltbar ab Level 1"
+    },
+    {
+        "id": "blam",
+        "name": "Blam",
+        "portraitAsset": "charakter_2",
+        "requiredAccountLevel": 10,
+        "description": "Freischaltbar ab Level 10"
+    }
+]

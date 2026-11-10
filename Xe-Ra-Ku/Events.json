@@ -1,0 +1,46 @@
+[
+  {
+    "id": "cyber_training",
+    "title": "Cyber Training",
+    "subtitle": "Das Trainings-Event für neue Duellanten.",
+    "enemyID": "shadow_rival",
+    "requiredAccountLevel": 1,
+    "rewards": {
+      "coins": 200,
+      "crystals": 5,
+      "experience": 75
+    },
+    "appearance": {
+      "accentHex": "#FFAA33",
+      "backgroundTopHex": "#291004",
+      "backgroundBottomHex": "#160725",
+      "shaderHue": 150,
+      "shaderIntensity": 0.8
+    },
+    "startsAt": null,
+    "endsAt": null,
+    "energyCost": 10
+  },
+  {
+    "id": "void_protocol",
+    "title": "Void-Protokoll",
+    "subtitle": "Bezwinge den Wächter der Leere.",
+    "enemyID": "void_guardian",
+    "requiredAccountLevel": 10,
+    "rewards": {
+      "coins": 1000,
+      "crystals": 25,
+      "experience": 350
+    },
+    "appearance": {
+      "accentHex": "#E566FF",
+      "backgroundTopHex": "#210A35",
+      "backgroundBottomHex": "#060A28",
+      "shaderHue": 65,
+      "shaderIntensity": 0.8
+    },
+    "startsAt": null,
+    "endsAt": null,
+    "energyCost": 20
+  }
+]

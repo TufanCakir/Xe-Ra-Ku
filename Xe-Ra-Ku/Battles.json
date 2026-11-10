@@ -1,0 +1,68 @@
+[
+  {
+    "id": "duel_training_bot",
+    "title": "TRAININGS-BOT",
+    "subtitle": "Besiege den Gegner und verdiene Belohnungen.",
+    "enemyID": "shadow_rival",
+    "requiredAccountLevel": 1,
+    "rewards": {
+      "coins": 100,
+      "crystals": 1,
+      "experience": 40
+    },
+    "appearance": {
+      "accentHex": "#00CCFF",
+      "backgroundTopHex": "#04102B",
+      "backgroundBottomHex": "#100525",
+      "shaderHue": 0,
+      "shaderIntensity": 0.8
+    },
+    "startsAt": null,
+    "endsAt": null,
+    "energyCost": 5
+  },
+  {
+    "id": "duel_shadow_rival",
+    "title": "SCHATTEN-RIVALE",
+    "subtitle": "Besiege den Gegner und verdiene Belohnungen.",
+    "enemyID": "shadow_rival",
+    "requiredAccountLevel": 5,
+    "rewards": {
+      "coins": 200,
+      "crystals": 2,
+      "experience": 80
+    },
+    "appearance": {
+      "accentHex": "#BB66FF",
+      "backgroundTopHex": "#04102B",
+      "backgroundBottomHex": "#100525",
+      "shaderHue": 35,
+      "shaderIntensity": 0.8
+    },
+    "startsAt": null,
+    "endsAt": null,
+    "energyCost": 10
+  },
+  {
+    "id": "duel_void_guardian",
+    "title": "VOID-WÄCHTER",
+    "subtitle": "Besiege den Gegner und verdiene Belohnungen.",
+    "enemyID": "void_guardian",
+    "requiredAccountLevel": 10,
+    "rewards": {
+      "coins": 300,
+      "crystals": 3,
+      "experience": 120
+    },
+    "appearance": {
+      "accentHex": "#FF5599",
+      "backgroundTopHex": "#04102B",
+      "backgroundBottomHex": "#100525",
+      "shaderHue": 70,
+      "shaderIntensity": 0.8
+    },
+    "startsAt": null,
+    "endsAt": null,
+    "energyCost": 15
+  }
+]

@@ -1,0 +1,82 @@
+{
+    "schemaVersion": 1,
+    "cards": [
+        {
+            "id": "nova",
+            "name": "NOVA",
+            "element": "fire",
+            "attack": 1800,
+            "defense": 1200
+        },
+        {
+            "id": "cyber",
+            "name": "CYBER",
+            "element": "water",
+            "attack": 2200,
+            "defense": 1500
+        },
+        {
+            "id": "raiku",
+            "name": "RAIKU",
+            "element": "shadow",
+            "attack": 1600,
+            "defense": 2000
+        },
+        {
+            "id": "seraph",
+            "name": "SERAPH",
+            "element": "holy",
+            "attack": 2500,
+            "defense": 1800
+        },
+        {
+            "id": "abyss",
+            "name": "ABYSS",
+            "element": "void",
+            "attack": 2800,
+            "defense": 1400
+        },
+        {
+            "id": "flora",
+            "name": "FLORA",
+            "element": "plant",
+            "attack": 1200,
+            "defense": 2400
+        },
+        {
+            "id": "terra",
+            "name": "TERRA",
+            "element": "earth",
+            "attack": 1900,
+            "defense": 2100
+        },
+        {
+            "id": "lumina",
+            "name": "LUMINA",
+            "element": "light",
+            "attack": 2300,
+            "defense": 1600
+        },
+        {
+            "id": "golem",
+            "name": "GOLEM",
+            "element": "stone",
+            "attack": 1500,
+            "defense": 3000
+        },
+        {
+            "id": "verdant",
+            "name": "VERDANT",
+            "element": "grass",
+            "attack": 1700,
+            "defense": 1900
+        },
+        {
+            "id": "amora",
+            "name": "AMORA",
+            "element": "lust",
+            "attack": 2100,
+            "defense": 1700
+        }
+    ]
+}

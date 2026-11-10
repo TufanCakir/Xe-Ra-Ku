@@ -1,0 +1,9 @@
+{
+    "energy": {
+        "maximum": 100,
+        "regenerationInterval": 300,
+        "regenerationAmount": 1,
+        "battleCostMultiplier": 1.0,
+        "enabled": true
+    }
+}

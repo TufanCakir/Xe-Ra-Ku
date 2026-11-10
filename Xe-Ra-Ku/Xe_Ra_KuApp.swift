@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Xe_Ra_KuApp: App {
+    @State private var resourceManager = ResourceManager()
+
     var body: some Scene {
         WindowGroup {
             TechTunnelDemoView()
+                .environment(resourceManager)
         }
     }
 }
